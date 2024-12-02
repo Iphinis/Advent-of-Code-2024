@@ -1,6 +1,10 @@
+import os
 from collections import Counter
 
-with open("input.txt", "r") as file:
+script_dir = os.path.dirname(os.path.abspath(__file__))
+input_path = os.path.join(script_dir, "input.txt")
+
+with open(input_path, "r") as file:
     lines = [list(map(int, x.strip().split())) for x in file.readlines()]
 
 l1, l2 = zip(*lines)
